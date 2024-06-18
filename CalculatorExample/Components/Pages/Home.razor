@@ -1,0 +1,26 @@
+﻿@page "/"
+@page "/noah"
+@page "/noah/{Name}"
+
+<PageTitle>Home Page</PageTitle>
+
+@if (!string.IsNullOrEmpty(Name))
+{
+    <p>My name is: @Name</p>
+}
+
+
+<div class="container">
+    <div class="row col-6">
+        <div id="calc" class="border border-primary">
+            <p>This is holder stuff</p>
+        </div>
+    </div>
+
+</div>
+
+@code
+{
+    [Parameter]
+    public string Name { get; set; }
+}
